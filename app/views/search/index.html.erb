@@ -1,0 +1,18 @@
+<center><h1>Members of the <%= @nation.gsub("_", " ").titleize %></h1></center>
+<p><b>Total Members:</b> <%= @all_characters.count %></p>
+
+<% @twenty_five_characters.each do |character| %>
+  <h3>Name: <%= character.name %></h3><br>
+  <%= image_tag "#{character.photo}" %><br>
+  <% if character.allies.empty? %>
+    <b>Allies:</b> None<br>
+  <% else %>
+    <b>Allies:</b> <%= character.allies.join(", ") %><br>
+  <% end %>
+  <% if character.enemies.empty? %>
+    <b>Enemies:</b> None<br>
+  <% else %>
+    <b>Enemies:</b> <%= character.enemies.join(", ") %><br>
+  <% end %>
+  <b>Affiliation:</b> <%= character.affiliation %><br><br>
+<% end %>

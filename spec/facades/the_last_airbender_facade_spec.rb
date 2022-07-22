@@ -6,6 +6,6 @@ RSpec.describe TheLastAirbenderFacade do
 
     expect(characters).to be_a Array
     expect(characters).to be_all Character
-    expect(characters.count).to eq 25
+    expect(characters.count).to eq 97
   end
 end

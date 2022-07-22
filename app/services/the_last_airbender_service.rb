@@ -1,6 +1,6 @@
 class TheLastAirbenderService
   def self.conn
-    Faraday.new("https://last-airbender-api.herokuapp.com")
+    Faraday.new(url: "https://last-airbender-api.herokuapp.com/")
   end
 
   def self.get_last_airbender_data(uri)
